@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mascoxml</string>
+
+    <string name="imageButton">Abre la galería de imágenes</string>
+    <string  name="mapView">Muestra un mapa de la zona</string>
+
+</resources>
