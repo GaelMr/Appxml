@@ -6,21 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_backround"
-    tools:context=".ThirdActivity">
-
-    <TextView
-        android:id="@+id/lblTitulo_pantalla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="189dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="189dp"
-        android:layout_marginBottom="56dp"
-        android:text="Perfil"
-        app:layout_constraintBottom_toTopOf="@+id/lblFecha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".FifthActivity">
 
     <TextView
         android:id="@+id/lblFecha"
@@ -29,9 +15,10 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="300dp"
         android:layout_marginBottom="60dp"
-        android:text="Nombre: "
+        android:text="Fecha de la cita:"
         app:layout_constraintBottom_toTopOf="@+id/lblLugar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -41,9 +28,10 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="302dp"
         android:layout_marginBottom="60dp"
-        android:text="Apellido:"
+        android:text="Lugar: "
         app:layout_constraintBottom_toTopOf="@+id/lblRazon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -53,9 +41,10 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="321dp"
         android:layout_marginBottom="60dp"
-        android:text="Edad:"
+        android:text="Razon: "
         app:layout_constraintBottom_toTopOf="@+id/lblRecomen"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -64,10 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="281dp"
-        android:layout_marginBottom="250dp"
-        android:text="Id Mascota:"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:text="Receta:"
+        app:layout_constraintBottom_toTopOf="@+id/txtReceta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -76,19 +66,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="244dp"
-        android:layout_marginBottom="60dp"
-        android:text="Nombre Mascota:"
-        app:layout_constraintBottom_toTopOf="@+id/lblReceta"
+        android:layout_marginBottom="20dp"
+        android:text="Recomendaciones"
+        app:layout_constraintBottom_toTopOf="@+id/txtRecomen"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtFechaCita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginBottom="59dp"
-        android:text="*Nombre*"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="60dp"
+        android:text="*Fecha*"
         app:layout_constraintBottom_toTopOf="@+id/textLugar"
         app:layout_constraintStart_toEndOf="@+id/lblFecha" />
 
@@ -96,7 +87,7 @@
         android:id="@+id/textLugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="103dp"
+        android:layout_marginStart="124dp"
         android:layout_marginBottom="60dp"
         android:text="*Apellido*"
         app:layout_constraintBottom_toTopOf="@+id/txtRazon"
@@ -106,29 +97,40 @@
         android:id="@+id/txtRazon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="408dp"
         android:text="*Edad*"
-        app:layout_constraintBottom_toTopOf="@+id/txtRecomen"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lblRazon" />
 
     <TextView
         android:id="@+id/txtRecomen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="60dp"
         android:text="*Nombre Mascota*"
-        app:layout_constraintBottom_toTopOf="@+id/txtReceta"
-        app:layout_constraintStart_toEndOf="@+id/lblRecomen" />
+        app:layout_constraintBottom_toTopOf="@+id/lblReceta"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtReceta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="250dp"
-        android:text="*Id Mascota*"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="170dp"
+        android:text="*Receta*"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblReceta" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Ultima cita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
