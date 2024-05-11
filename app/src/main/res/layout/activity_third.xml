@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_backround"
+    android:layout_height="wrap_content"
+    android:background="@drawable/component_bg_green1"
     tools:context=".ThirdActivity">
 
     <TextView
@@ -13,122 +13,217 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="189dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="189dp"
-        android:layout_marginBottom="56dp"
         android:text="Perfil"
-        app:layout_constraintBottom_toTopOf="@+id/lblFecha"
+        android:textSize="32dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/lblFecha"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginBottom="60dp"
-        android:text="Nombre: "
-        app:layout_constraintBottom_toTopOf="@+id/lblLugar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/lblLugar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="302dp"
-        android:layout_marginBottom="60dp"
-        android:text="Apellido:"
-        app:layout_constraintBottom_toTopOf="@+id/lblRazon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/lblRazon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="321dp"
-        android:layout_marginBottom="60dp"
-        android:text="Edad:"
-        app:layout_constraintBottom_toTopOf="@+id/lblRecomen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/lblReceta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="281dp"
-        android:layout_marginBottom="250dp"
-        android:text="Id Mascota:"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/white_btn_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitulo_pantalla"
+        app:layout_constraintVertical_bias="1.0">
 
-    <TextView
-        android:id="@+id/lblRecomen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginBottom="60dp"
-        android:text="Nombre Mascota:"
-        app:layout_constraintBottom_toTopOf="@+id/lblReceta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/txtFechaCita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginBottom="59dp"
-        android:text="*Nombre*"
-        app:layout_constraintBottom_toTopOf="@+id/textLugar"
-        app:layout_constraintStart_toEndOf="@+id/lblFecha" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@drawable/component_bg_green2"
+                android:clipToPadding="false"
+                android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textLugar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="103dp"
-        android:layout_marginBottom="60dp"
-        android:text="*Apellido*"
-        app:layout_constraintBottom_toTopOf="@+id/txtRazon"
-        app:layout_constraintStart_toEndOf="@+id/lblLugar" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/txtRazon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="60dp"
-        android:text="*Edad*"
-        app:layout_constraintBottom_toTopOf="@+id/txtRecomen"
-        app:layout_constraintStart_toEndOf="@+id/lblRazon" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtRecomen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="61dp"
-        android:text="*Nombre Mascota*"
-        app:layout_constraintBottom_toTopOf="@+id/txtReceta"
-        app:layout_constraintStart_toEndOf="@+id/lblRecomen" />
+                        <TextView
+                            android:id="@+id/txtFechaCita"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*Nombre*"
+                            app:layout_constraintStart_toEndOf="@+id/lblFechaCita"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtReceta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="250dp"
-        android:text="*Id Mascota*"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblReceta" />
+                        <TextView
+                            android:id="@+id/lblFechaCita"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nombre:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@drawable/component_bg_green2"
+                android:clipToPadding="false"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblLugar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apellido:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textLugar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*Apellido*"
+                            app:layout_constraintStart_toEndOf="@+id/lblLugar"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@drawable/component_bg_green2"
+                android:clipToPadding="false"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblRazon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edad:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtRazon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*Edad*"
+                            app:layout_constraintStart_toEndOf="@+id/lblRazon"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@drawable/component_bg_green2"
+                android:clipToPadding="false"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtRecomen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*Nombre Mascota*"
+                            app:layout_constraintStart_toEndOf="@+id/lblRecomen"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblRecomen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nombre Mascota:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/component_bg_green2"
+                android:clipToPadding="false"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtReceta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*Id Mascota*"
+                            app:layout_constraintStart_toEndOf="@+id/lblReceta"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblReceta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Id Mascota:"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
