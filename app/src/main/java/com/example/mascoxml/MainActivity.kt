@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             val password = passwordInput.text.toString()
             Log.i("Test Credentials", "Username: $username and password: $password")
             if ((username == "hola") && (password == "1234")) {
-                val intent=Intent(this,SecondActivity::class.java)
+                val intent=Intent(this,FourthActivity::class.java)
                 startActivity(intent)
             }else{
                 Toast.makeText(this, "no jalo", Toast.LENGTH_SHORT).show()

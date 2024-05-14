@@ -30,13 +30,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitulo">
+
+        <Button
+            android:id="@+id/btnCreateRecor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear recordatorio"
+            android:onClick="createReminder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tableLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
         <TableLayout
             android:id="@+id/tableLayout"
@@ -73,7 +83,7 @@
                             android:layout_height="wrap_content"
                             android:autofillHints=""
                             android:ems="10"
-                            android:hint="@string/app_name"
+                            android:hint="Cita con el veterinario"
                             android:inputType="text"
                             android:minHeight="48dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -122,8 +132,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="@string/app_name"
-                            android:inputType="date"
+                            android:hint="dd/mm/yyyy"
+                            android:focusable="false"
                             android:minHeight="48dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/lblFechaRecor" />
@@ -162,7 +172,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="@string/app_name"
+                            android:hint="11:11"
                             android:inputType="time"
                             android:minHeight="48dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -195,7 +205,7 @@
                             android:layout_height="wrap_content"
                             android:autofillHints=""
                             android:ems="10"
-                            android:hint="@string/app_name"
+                            android:hint="Farmacia"
                             android:inputType="text"
                             android:minHeight="48dp"
                             app:layout_constraintStart_toStartOf="parent"
